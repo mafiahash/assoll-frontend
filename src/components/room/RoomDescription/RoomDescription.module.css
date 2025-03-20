@@ -1,0 +1,25 @@
+.description hr {
+	margin: 0;
+	border-top: 1px solid #dddddd;
+}
+.header h3 {
+	letter-spacing: -0.01em;
+	font-weight: 500;
+	padding-bottom: 10px;
+}
+.header div {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	font-family: 'Fira Mono';
+	padding-bottom: 30px;
+}
+.header div span {
+	width: 4px;
+	height: 4px;
+	border-radius: 100px;
+	background-color: #868585;
+}
+.header div p {
+	color: #868585;
+}

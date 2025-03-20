@@ -1,0 +1,21 @@
+.intro {
+	margin-bottom: 100px;
+}
+.intropic {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	display: flex;
+	align-items: end;
+	justify-content: center;
+}
+.intropic img {
+	object-fit: cover;
+	z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+	.intro {
+		margin-bottom: 50px;
+	}
+}

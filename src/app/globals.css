@@ -1,42 +1,498 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/*RESET CSS*/
 html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+	display: block;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img,
+object,
+embed {
+	max-width: 100%;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+del {
+	text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	font-weight: bold;
+	vertical-align: bottom;
+}
+td {
+	font-weight: normal;
+	vertical-align: top;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+input,
+select {
+	vertical-align: middle;
+}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type='radio'] {
+	vertical-align: text-bottom;
+}
+input[type='checkbox'] {
+	vertical-align: bottom;
+}
+.ie7 input[type='checkbox'] {
+	vertical-align: baseline;
+}
+.ie6 input {
+	vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+	font: 99% sans-serif;
+}
+
+table {
+	font-size: inherit;
+	font: 100%;
+}
+
+small {
+	font-size: 85%;
+}
+
+strong {
+	font-weight: bold;
+}
+
+td,
+td img {
+	vertical-align: top;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, sans-serif;
+}
+
+.clickable,
+label,
+input[type='button'],
+input[type='submit'],
+input[type='file'],
+button {
+	cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+}
+
+button,
+input[type='button'] {
+	width: auto;
+	overflow: visible;
+}
+
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+
+img {
+	pointer-events: none;
+}
+/*RESET CSS*/
+@font-face {
+	font-family: 'Fira Mono';
+	src: url('/fonts/FiraMono-Regular.eot');
+	src: local('Fira Mono Regular'), local('FiraMono-Regular'),
+		url('/fonts/FiraMono-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/FiraMono-Regular.woff2') format('woff2'),
+		url('/fonts/FiraMono-Regular.woff') format('woff'),
+		url('/fonts/FiraMono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fira Mono';
+	src: url('/fonts/FiraMono-Medium.eot');
+	src: local('Fira Mono Medium'), local('FiraMono-Medium'),
+		url('/fonts/FiraMono-Medium.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/FiraMono-Medium.woff2') format('woff2'),
+		url('/fonts/FiraMono-Medium.woff') format('woff'),
+		url('/fonts/FiraMono-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fira Mono';
+	src: url('/fonts/FiraMono-Bold.eot');
+	src: local('Fira Mono Bold'), local('FiraMono-Bold'),
+		url('/fonts/FiraMono-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/FiraMono-Bold.woff2') format('woff2'),
+		url('/fonts/FiraMono-Bold.woff') format('woff'),
+		url('/fonts/FiraMono-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueBoldCondensed.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueBoldCondensed.woff') format('woff'),
+		url('/fonts/HelveticaNeueBoldCondensed.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueBlackCondensed.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueBlackCondensed.woff') format('woff'),
+		url('/fonts/HelveticaNeueBlackCondensed.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+		url('/fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueCyr-Light.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+		url('/fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+		url('/fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueCyr-Black.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueCyr-Black.woff') format('woff'),
+		url('/fonts/HelveticaNeueCyr-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueCyr-Heavy.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueCyr-Heavy.woff') format('woff'),
+		url('/fonts/HelveticaNeueCyr-Heavy.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+		url('/fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueCyr-UltraLight.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueCyr-UltraLight.woff') format('woff'),
+		url('/fonts/HelveticaNeueCyr-UltraLight.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('/fonts/HelveticaNeueCyr-Thin.woff2') format('woff2'),
+		url('/fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
+		url('/fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Yeseva One';
+	src: url('/fonts/YesevaOne-Regular.woff2') format('woff2'),
+		url('/fonts/YesevaOne-Regular.woff') format('woff'),
+		url('/fonts/YesevaOne-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SturkopfGrotesk';
+	src: local('SturkopfGrotesk'),
+		url('/fonts/SturkopfGrotesk.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Helvetica Neue';
+	background-color: #fffcf9;
+	color: #222325;
+}
+
+.wrapper {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+
+	gap: 20px;
+	grid-auto-flow: dense;
+}
+@media screen and (max-width: 768px) {
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+a {
+	font-size: 14px;
+	text-decoration: none;
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 56px;
+	letter-spacing: 0.05em;
+}
+h3 {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 110%;
+	letter-spacing: -0.04em;
+}
+h4 {
+	font-size: 24px;
+}
+big {
+	font-size: 18px;
+	letter-spacing: -0.01em;
+}
+p {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 150%;
+	letter-spacing: -0.015em;
+	color: #222325;
+}
+
+small {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+	padding-top: 0.25em;
+}
+
+@media screen and (max-width: 1040px) {
+	h2 {
+		font-size: 45px;
+	}
+}
+@media screen and (max-width: 768px) {
+	h2 {
+		font-size: 36px;
+	}
+}
+
+.BookingLightbox button {
+	font-family: 'Fira Mono';
+	text-transform: uppercase;
 }

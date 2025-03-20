@@ -1,0 +1,17 @@
+.HotelWidget {
+	transform: translateY(50%);
+	max-width: 1200px;
+}
+.HotelWidget button {
+	font-family: 'Fira Mono';
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+	.HotelWidget {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

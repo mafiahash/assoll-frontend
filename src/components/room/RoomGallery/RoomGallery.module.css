@@ -1,0 +1,47 @@
+.name {
+	font-weight: 500;
+	letter-spacing: -0.01em;
+	padding-bottom: 6px;
+}
+.reviews {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-bottom: 25px;
+}
+.reviews span {
+	width: 4px;
+	height: 4px;
+	border-radius: 100px;
+	background-color: #222325;
+}
+.stars {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+.stars p {
+	padding-top: 0.25em;
+	font-weight: 500;
+}
+.review {
+	padding-top: 0.25em;
+	font-weight: 500;
+}
+.gallery {
+	margin-bottom: 50px;
+}
+.big {
+	position: relative;
+	grid-column: 2 span;
+	grid-row: 2 span;
+	width: 100%;
+	aspect-ratio: 1/1;
+}
+.small {
+	position: relative;
+	grid-columns: span 1;
+	grid-template-rows: span 1;
+	width: 100%;
+	aspect-ratio: 1/1;
+}

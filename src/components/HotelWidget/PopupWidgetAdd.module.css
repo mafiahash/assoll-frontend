@@ -1,0 +1,20 @@
+.Popup {
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #ffffff;
+}
+.close {
+	/* display: none; */
+	position: relative;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+}
