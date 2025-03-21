@@ -18,8 +18,9 @@ export const PopupWidgetAdd = ({ isOpen, onClose }) => {
 			) {
 				clearInterval(checkWidget)
 				console.log('Adding HotelWidget to PopupWidget')
-				window.HotelWidget.add({
+				const widgetID = window.HotelWidget.add({
 					type: 'bookingForm',
+					inline: true,
 					theme: IntroConfig,
 					appearance: { container: 'PopupWidget' },
 				})
