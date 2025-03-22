@@ -276,6 +276,9 @@ img {
 	pointer-events: none;
 }
 /*RESET CSS*/
+:root {
+	--bm-theme-btnPayTextColor: #ffffff !important;
+}
 @font-face {
 	font-family: 'Fira Mono';
 	src: url('/fonts/FiraMono-Regular.eot');
@@ -495,4 +498,8 @@ small {
 .BookingLightbox button {
 	font-family: 'Fira Mono';
 	text-transform: uppercase;
+}
+
+.WidgetNumberInputButton {
+	color: #ffffff;
 }

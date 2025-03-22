@@ -25,6 +25,9 @@
 	color: #222325;
 }
 .logo {
+	position: relative;
+	width: 120px;
+	height: 40px;
 	padding-top: 0.25em;
 	text-decoration: none;
 	color: #222325;
@@ -37,10 +40,16 @@
 	transform: translate(-50%, -50%);
 	transition: 0.3s ease;
 }
+.logo img {
+	width: 100%;
+	height: max-content;
+}
 .logo:hover {
 	color: #222325;
 }
 .button {
+	cursor: pointer;
+	font-size: 14px;
 	display: flex;
 	letter-spacing: 0.15em;
 	padding: 10px 15px;
@@ -108,7 +117,7 @@
 	background: #222325;
 	color: #ffffff !important;
 	font-weight: 500;
-
+	font-size: 14px;
 	letter-spacing: 0.15em;
 	gap: 5px;
 	align-items: center;

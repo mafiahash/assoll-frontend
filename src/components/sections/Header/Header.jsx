@@ -1,5 +1,4 @@
 'use client'
-import { PopupWidgetAdd } from '@/components/HotelWidget/PopupWidgetAdd'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -7,22 +6,28 @@ import styles from './Header.module.css'
 
 export default function Header() {
 	const [menuOpen, setMenuOpen] = useState(false)
-	const [popupIsOpen, setPopupOpen] = useState(false)
 
 	const toggleMenu = () => setMenuOpen(!menuOpen)
+
+	const scrollToWidget = () => {
+		const widget = document.getElementById('BookingFormWidget')
+		if (widget) {
+			widget.scrollIntoView({ behavior: 'smooth', block: 'center' })
+		}
+	}
 
 	return (
 		<div className={styles.header_wrapper}>
 			<div className='wrapper'>
 				<div className={styles.header}>
 					<div className={styles.links}>
-						<Link href='/'>Номера</Link>
-						<Link href='/'>О нас</Link>
+						<Link href='/rooms'>Номера</Link>
+						<Link href='/#aboutUs'>О нас</Link>
 					</div>
 					<Link href='/' className={styles.logo}>
-						Ассоль
+						<Image src='/img/logo.svg' alt='АССОЛЬ' fill />
 					</Link>
-					<div className={styles.button} onClick={() => setPopupOpen(true)}>
+					<div className={styles.button} onClick={scrollToWidget}>
 						Забронировать
 						<Image src='/icons/arrow.svg' alt='' width='17' height='17' />
 					</div>
@@ -38,9 +43,19 @@ export default function Header() {
 							<div className={styles.close} onClick={toggleMenu}>
 								<Image src='/icons/close.svg' alt='Закрыть' fill />
 							</div>
-							<Link href='/'>Номера</Link>
-							<Link href='/'>О нас</Link>
-							<div className={styles.mob_button}>
+							<Link href='/rooms' onClick={() => setMenuOpen(false)}>
+								Номера
+							</Link>
+							<Link href='/#aboutUs' onClick={() => setMenuOpen(false)}>
+								О нас
+							</Link>
+							<div
+								className={styles.mob_button}
+								onClick={() => {
+									setMenuOpen(false)
+									scrollToWidget()
+								}}
+							>
 								Забронировать
 								<Image src='/icons/arrow.svg' alt='' width='17' height='17' />
 							</div>
@@ -48,11 +63,6 @@ export default function Header() {
 					</div>
 				)}
 			</div>
-
-			<PopupWidgetAdd
-				isOpen={popupIsOpen}
-				onClose={() => setPopupOpen(false)}
-			/>
 		</div>
 	)
 }
