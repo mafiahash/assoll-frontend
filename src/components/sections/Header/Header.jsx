@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Header.module.css'
 
 export default function Header() {
@@ -10,11 +10,29 @@ export default function Header() {
 	const toggleMenu = () => setMenuOpen(!menuOpen)
 
 	const scrollToWidget = () => {
-		const widget = document.getElementById('BookingFormWidget')
-		if (widget) {
-			widget.scrollIntoView({ behavior: 'smooth', block: 'center' })
+		if (typeof window === 'undefined') return
+
+		if (window.location.pathname === '/') {
+			const widget = document.getElementById('BookingFormWidget')
+			if (widget) {
+				widget.scrollIntoView({ behavior: 'smooth', block: 'center' })
+			}
+		} else {
+			window.location.href = '/#booking'
 		}
 	}
+
+	useEffect(() => {
+		if (typeof window === 'undefined') return
+		if (window.location.hash === '#booking') {
+			const widget = document.getElementById('BookingFormWidget')
+			if (widget) {
+				setTimeout(() => {
+					widget.scrollIntoView({ behavior: 'smooth', block: 'center' })
+				}, 300)
+			}
+		}
+	}, [])
 
 	return (
 		<div className={styles.header_wrapper}>

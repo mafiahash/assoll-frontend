@@ -36,44 +36,71 @@ export default function IntroRooms() {
 					scrollbar={{ draggable: true }}
 				>
 					<SwiperSlide className={styles.slide}>
-						<div className={styles.img}>
-							<Image src='/img/1.png' alt='Одноместный номер' fill />
-						</div>
-						<h4>
-							Двухместный номер
-							<Image src='icons/arrow1.svg' alt='' width='24' height='24' />
-						</h4>
-						<small>Стандартный двухместный номер с просторным балконом</small>
+						<Link href='/rooms/1'>
+							<div className={styles.img}>
+								<Image
+									src='/img/rooms/1/cover.jpg'
+									alt='Двухместный номер'
+									fill
+								/>
+							</div>
+							<h4>
+								Двухместный номер
+								<Image src='icons/arrow1.svg' alt='' width='24' height='24' />
+							</h4>
+							<small>Стандартный двухместный номер с просторным балконом</small>
+						</Link>
 					</SwiperSlide>
 					<SwiperSlide className={styles.slide}>
-						<div className={styles.img}>
-							<Image src='/img/1.png' alt='Одноместный номер' fill />
-						</div>
-						<h4>
-							Apartments
-							<Image src='icons/arrow1.svg' alt='' width='24' height='24' />
-						</h4>
-						<small>121,560 apartments</small>
+						<Link href='/rooms/2'>
+							<div className={styles.img}>
+								<Image
+									src='/img/rooms/2/cover.jpg'
+									alt='Двухместный номер'
+									fill
+								/>
+							</div>
+							<h4>
+								Двухместный номер
+								<Image src='icons/arrow1.svg' alt='' width='24' height='24' />
+							</h4>
+							<small>
+								Супериор с просторным балконом с одной двуспальной или двумя
+								раздельными кроватями
+							</small>
+						</Link>
 					</SwiperSlide>
 					<SwiperSlide className={styles.slide}>
-						<div className={styles.img}>
-							<Image src='/img/1.png' alt='Одноместный номер' fill />
-						</div>
-						<h4>
-							Apartments
-							<Image src='icons/arrow1.svg' alt='' width='24' height='24' />
-						</h4>
-						<small>121,560 apartments</small>
+						<Link href='/rooms/3'>
+							<div className={styles.img}>
+								<Image
+									src='/img/rooms/3/cover.jpg'
+									alt='Двухместный номер'
+									fill
+								/>
+							</div>
+							<h4>
+								Двухместный номер
+								<Image src='icons/arrow1.svg' alt='' width='24' height='24' />
+							</h4>
+							<small>Супериор с просторным балконом</small>
+						</Link>
 					</SwiperSlide>
 					<SwiperSlide className={styles.slide}>
-						<div className={styles.img}>
-							<Image src='/img/1.png' alt='Одноместный номер' fill />
-						</div>
-						<h4>
-							Apartments
-							<Image src='icons/arrow1.svg' alt='' width='24' height='24' />
-						</h4>
-						<small>121,560 apartments</small>
+						<Link href='/rooms/4'>
+							<div className={styles.img}>
+								<Image
+									src='/img/rooms/4/cover.jpg'
+									alt='Двухместный номер'
+									fill
+								/>
+							</div>
+							<h4>
+								Двухместный номер
+								<Image src='icons/arrow1.svg' alt='' width='24' height='24' />
+							</h4>
+							<small>Супериор с просторным балконом и видом на море</small>
+						</Link>
 					</SwiperSlide>
 				</Swiper>
 				<Link href='/rooms' className={styles.button}>

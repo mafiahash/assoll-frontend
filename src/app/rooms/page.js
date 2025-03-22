@@ -10,7 +10,7 @@ export default function Room() {
 			<div className={`${styles.rooms} wrapper grid`}>
 				<Link href='/rooms/1' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/1/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/1/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Двухместный номер
@@ -21,7 +21,7 @@ export default function Room() {
 
 				<Link href='/rooms/2' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/2/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/2/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Двухместный номер
@@ -35,7 +35,7 @@ export default function Room() {
 
 				<Link href='/rooms/3' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/3/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/3/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Двухместный номер
@@ -46,7 +46,7 @@ export default function Room() {
 
 				<Link href='/rooms/4' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/4/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/4/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Двухместный номер
@@ -57,7 +57,7 @@ export default function Room() {
 
 				<Link href='/rooms/5' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/5/Cover.jpeg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/5/cover.jpeg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Двухместный номер
@@ -71,7 +71,7 @@ export default function Room() {
 
 				<Link href='/rooms/6' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/6/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/6/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Трехместный номер
@@ -82,7 +82,7 @@ export default function Room() {
 
 				<Link href='/rooms/7' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/7/Cover.jpeg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/7/cover.jpeg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Трехместный номер
@@ -96,7 +96,7 @@ export default function Room() {
 
 				<Link href='/rooms/8' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/8/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/8/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Трехместный номер
@@ -109,7 +109,7 @@ export default function Room() {
 
 				<Link href='/rooms/9' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/9/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/9/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Делюкс номер
@@ -120,7 +120,7 @@ export default function Room() {
 
 				<Link href='/rooms/10' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/10/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/10/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Люкс номер
@@ -131,7 +131,7 @@ export default function Room() {
 
 				<Link href='/rooms/11' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/11/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/11/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Семейный номер
@@ -144,7 +144,7 @@ export default function Room() {
 
 				<Link href='/rooms/12' className={styles.card}>
 					<div className={styles.img}>
-						<Image src='/img/rooms/12/Cover.jpg' alt='Двухместный номер' fill />
+						<Image src='/img/rooms/12/cover.jpg' alt='Двухместный номер' fill />
 					</div>
 					<h4>
 						Семейный номер
