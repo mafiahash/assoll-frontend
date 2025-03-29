@@ -16,10 +16,25 @@
 	gap: 30px;
 }
 .links a {
-	color: #222325;
+	position: relative;
+	color: #172e44;
 	letter-spacing: 0.15em;
 	font-weight: 500;
 	transition: 0.3s ease;
+}
+.links a::after {
+	content: '';
+	position: absolute;
+	bottom: -3px; /* расстояние до текста */
+	left: 0;
+	width: 0;
+	height: 1px; /* толщина полоски */
+	background-color: #222325; /* цвет полоски */
+	transition: width 0.3s ease; /* плавность анимации */
+}
+
+.links a:hover::after {
+	width: 100%; /* на всю ширину ссылки при наведении */
 }
 .links a:hover {
 	color: #222325;
@@ -47,13 +62,34 @@
 .logo:hover {
 	color: #222325;
 }
+.buttons {
+	position: relative;
+	display: flex;
+	gap: 10px;
+}
+.buttons a {
+	display: block;
+	aspect-ratio: 1/1;
+	height: 37px;
+	padding: 8.5px;
+	background-color: #172e44;
+	transition: 0.3s ease;
+}
+.buttons a:hover {
+	background-color: #222325;
+}
+.buttons a .icon {
+	position: relative;
+	width: 20px;
+	height: 20px;
+}
 .button {
 	cursor: pointer;
 	font-size: 14px;
 	display: flex;
 	letter-spacing: 0.15em;
 	padding: 10px 15px;
-	background: #222325;
+	background: #172e44;
 	color: #ffffff;
 	font-weight: 500;
 	transition: 0.3s ease;
@@ -106,7 +142,7 @@
 }
 
 .menuContent a {
-	color: #222325;
+	color: #172e44;
 	letter-spacing: 0.15em;
 	font-weight: 500;
 }
@@ -114,7 +150,7 @@
 	cursor: pointer;
 	display: flex;
 	padding: 10px 15px;
-	background: #222325;
+	background: #172e44;
 	color: #ffffff !important;
 	font-weight: 500;
 	font-size: 14px;
@@ -129,7 +165,7 @@
 		top: 0%;
 		transform: translate(-0%, -0%);
 	}
-	.button {
+	.buttons {
 		display: none;
 	}
 	.links {

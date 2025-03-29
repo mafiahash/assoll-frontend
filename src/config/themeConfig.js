@@ -2,7 +2,7 @@ const GlobalConfig = {
 	common: {
 		buttons: {
 			primary: {
-				bg: '#222325',
+				bg: '#172e44',
 				hoverBg: '#222325',
 				borderColor: 'none',
 				hoverBorderColor: 'none',
@@ -11,7 +11,7 @@ const GlobalConfig = {
 			},
 			secondary: {
 				bg: '#ffffff',
-				hoverBg: '#222325',
+				hoverBg: '#172e44',
 				hoverTextColor: '#ffffff',
 				borderColor: '#DDDDDD',
 				hoverBorderColor: 'none',

@@ -4,15 +4,12 @@
 	padding: 20px 0;
 }
 .footer {
-	display: flex;
-	gap: 10px;
-	align-items: center;
 }
 .footer span {
 	width: 4px;
 	height: 4px;
 	border-radius: 100px;
-	background-color: #222325;
+	background-color: #172e44;
 }
 .footer a {
 	font-size: 16px;
@@ -20,5 +17,83 @@
 	line-height: 150%;
 	letter-spacing: -0.015em;
 	text-decoration: underline;
-	color: #222325;
+	color: #172e44;
+}
+
+.footer hr {
+	border-top: 1px #dddddd solid;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.column big {
+	font-weight: 500;
+}
+.column a {
+	position: relative;
+	font-family: Fira Mono;
+	font-size: 14px;
+	text-decoration: none;
+	width: max-content;
+}
+.column a::after {
+	content: '';
+	position: absolute;
+	bottom: -2px; /* расстояние до текста */
+	left: 0;
+	width: 0;
+	height: 1px; /* толщина полоски */
+	background-color: #172e44; /* цвет полоски */
+	transition: width 0.3s ease; /* плавность анимации */
+}
+
+.column a:hover::after {
+	width: 100%; /* на всю ширину ссылки при наведении */
+}
+
+.column small {
+	width: max-content;
+	cursor: pointer;
+	position: relative;
+	font-family: Fira Mono;
+}
+
+.column small::after {
+	content: '';
+	position: absolute;
+	bottom: -2px; /* расстояние до текста */
+	left: 0;
+	width: 0;
+	height: 1px; /* толщина полоски */
+	background-color: #172e44; /* цвет полоски */
+	transition: width 0.3s ease; /* плавность анимации */
+}
+
+.column small:hover::after {
+	width: 100%; /* на всю ширину ссылки при наведении */
+}
+
+.column .soc {
+	display: flex;
+	gap: 10px;
+}
+.column .soc a {
+	width: 40px;
+	height: 40px;
+	background-color: #172e44;
+	padding: 10px;
+}
+.column .soc .icon {
+	position: relative;
+	width: 20px;
+	height: 20px;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
 }

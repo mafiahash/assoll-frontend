@@ -1,0 +1,37 @@
+.contacts {
+	padding-bottom: 50px;
+}
+.contacts hr {
+	margin: 20px 0 10px;
+	border-top: 1px solid #dddddd;
+}
+.contacts h2 {
+	font-family: 'SturkopfGrotesk';
+	text-transform: uppercase;
+	padding-bottom: 20px;
+}
+.items {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.item {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 40px;
+}
+.item .header {
+	font-weight: 500;
+	max-width: 245px;
+	width: 100%;
+}
+.item .text {
+	font-family: 'Fira Mono';
+	color: #868585;
+}
+
+@media screen and (max-width: 768px) {
+	.item {
+		flex-direction: column;
+	}
+}

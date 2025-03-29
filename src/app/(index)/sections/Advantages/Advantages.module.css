@@ -1,0 +1,47 @@
+.header {
+	font-family: 'SturkopfGrotesk';
+	color: #172e44;
+	padding-bottom: 0.3em;
+	text-transform: uppercase;
+}
+.advantages {
+	margin: 50px auto;
+}
+.items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+.item {
+	display: flex;
+	gap: 15px;
+}
+.item .icon {
+	flex-shrink: 0;
+	position: relative;
+	width: 32px;
+	height: 32px;
+}
+.item .texts {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+.item .texts p {
+	font-weight: 300;
+	font-size: 18px;
+	letter-spacing: -0.01em;
+	color: #868585;
+}
+@media screen and (max-width: 768px) {
+	.item {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.item big,
+	.item .texts p {
+		font-size: 14px;
+	}
+}

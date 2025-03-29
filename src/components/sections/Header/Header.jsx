@@ -41,13 +41,21 @@ export default function Header() {
 					<div className={styles.links}>
 						<Link href='/rooms'>Номера</Link>
 						<Link href='/#aboutUs'>О нас</Link>
+						<Link href='/contacts'>Контакты</Link>
 					</div>
 					<Link href='/' className={styles.logo}>
 						<Image src='/img/logo.svg' alt='АССОЛЬ' fill />
 					</Link>
-					<div className={styles.button} onClick={scrollToWidget}>
-						Забронировать
-						<Image src='/icons/arrow.svg' alt='' width='17' height='17' />
+					<div className={styles.buttons}>
+						<Link href='tel:+79181670290'>
+							<div className={styles.icon}>
+								<Image src='/icons/phone.svg' alt='Телефон:' fill />
+							</div>
+						</Link>
+						<div className={styles.button} onClick={scrollToWidget}>
+							Забронировать
+							<Image src='/icons/arrow.svg' alt='' width='17' height='17' />
+						</div>
 					</div>
 
 					<div className={styles.burger} onClick={toggleMenu}>
@@ -66,6 +74,9 @@ export default function Header() {
 							</Link>
 							<Link href='/#aboutUs' onClick={() => setMenuOpen(false)}>
 								О нас
+							</Link>
+							<Link href='/contacts' onClick={() => setMenuOpen(false)}>
+								Контакты
 							</Link>
 							<div
 								className={styles.mob_button}
